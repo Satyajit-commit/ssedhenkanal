@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students - Synergy School of Engineering</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            text-align: center;
+            background: #891c1c;
+            color: white;
+            padding: 20px 0;
+        }
+
+        nav {
+            background-color: #891c1c;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .content-container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+
+        .content-container h1 {
+            color: #881367;
+            text-align: center;
+        }
+
+        .content-container p {
+            font-size: 16px;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .student-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .student {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: calc(33.33% - 20px);
+        }
+
+        .student-photo-container {
+            width: 100%;
+            padding-top: 100%;
+            /* This will maintain a 1:1 aspect ratio */
+            position: relative;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .student-photo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .student h2 {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .student p {
+            text-align: center;
+            font-size: 16px;
+            color: #666;
+        }
+
+        .academic-toppers {
+            margin-top: 40px;
+        }
+
+        .academic-toppers h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .academic-toppers ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .academic-toppers ul li {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: calc(33.33% - 20px);
+        }
+
+        .academic-toppers ul li .photo-container {
+            width: 100%;
+            padding-top: 100%;
+            /* This will maintain a 1:1 aspect ratio */
+            position: relative;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .academic-toppers ul li .photo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .academic-toppers ul li h3 {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .academic-toppers ul li p {
+            text-align: center;
+            font-size: 16px;
+            color: #666;
+        }
+
+        @media (max-width: 1200px) {
+            .student {
+                width: calc(50% - 20px);
+            }
+
+            .academic-toppers ul li {
+                width: calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 992px) {
+            .student {
+                width: calc(50% - 20px);
+            }
+
+            .academic-toppers ul li {
+                width: calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .student {
+                width: 100%;
+                margin: 20px 0;
+            }
+
+            .academic-toppers ul li {
+                width: 100%;
+                margin: 20px 0;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .content-container {
+                padding: 10px;
+            }
+
+            .student {
+                padding: 10px;
+            }
+
+            .academic-toppers ul li {
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .content-container {
+                padding: 5px;
+            }
+
+            .student {
+                padding: 5px;
+            }
+
+            .academic-toppers ul li {
+                padding: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="Satya.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="students.html">Students</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="content-container">
+        <h1>Welcome to the Students Page</h1>
+        <p>This page is dedicated to the students of Synergy School of Engineering. Here you can find information about
+            student achievements, programs, and resources available to you.</p>
+        <p>Final Year <b>COMPUTER SCIENCE ENGINEERING</b> student list </p>
+    </div>
+    <!-- Add more students here -->
+    <div class="academic-toppers">
+        <h2>Academic Toppers</h2>
+        <ul>
+            <li>
+                <div class="photo-container">
+                    <img src="DCS-22-34.jpg" alt="2022-2023 year" class="photo">
+                </div>
+                <h3>Satyajit Gochhayat</h3>
+                <h2>accademic year-2022-2023</h2>
+                <p>DCS-22-34, percantage:87.6%</p>
+            </li>
+            <li>
+                <div class="photo-container">
+                    <img src="Dcs-23-le-09.jpg" alt="Student 2" class="photo">
+                </div>
+                <h3>sonalin sahu</h3>
+                <h2>accademic year-2023-2024</h2>
+                <p>DCS-23-le-09, percantage:86%</p>
+            </li>
+            <li>
+                <div class="photo-container">
+                    <img src="dcs-23-l3-04.jpg" alt="Student 2" class="photo">
+                </div>
+                <h3>Biswajit Biswal</h3>
+                <h2>accademic year-2023-2024</h2>
+                <p>DCS-23-le-04, percantage:86%</p>
+            </li>
+        </ul>
+    </div>
+    <div class="student-list">
+        <div class="student">
+            <div class="student-photo-container">
+                <img src="dcs-22-02.jpg" alt="Student 1" class="student-photo">
+            </div>
+            <h2>Adesh Ansuman setha</h2>
+            <p>DCS-22-02</p>
+        </div>
+        <div class="student">
+            <div class="student-photo-container">
+                <img src="DCS-22-04.jpg" alt="Student 1" class="student-photo">
+            </div>
+            <h2>Anil Behera</h2>
+            <p>DCS-22-04</p>
+        </div>
+        <div class="student">
+            <div class="student-photo-container">
+                <img src="dcs-22-03.jpg" alt="Student 1" class="student-photo">
+            </div>
+            <h2>Aditya Pritam Samal</h2>
+            <p>DCS-22-03</p>
+        </div>
+
+        <div class="student">
+            <div class="student-photo-container">
+                <img src="des-22-08.jpg" alt="Student 2" class="student-photo">
+            </div>
+            <h2>Bhagyashree Beura</h2>
+            <p>DCS-22-10</p>
+        </div>
+
+        <div class="student">
+            <div class="student-photo-container">
+                <img src="dcs-22-10.jpg" alt="Student 2" class="student-photo">
+            </div>
+            <h2>Biswajit Maharana</h2>
+            <p>DCS-22-10</p>
+        </div>
+        <div class="student">
+            <div class="student-photo-container">
+                <img src="dcs-22-12.jpg" alt="Student 2" class="student-photo">
+            </div>
+            <h2>Bikash kumbhar</h2>
+            <p>DCS-22-12</p>
+        </div>
+        <div class="student">
+            <div class="student-photo-container">
+                <img src="dcs-22-13.jpg" alt="Student 2" class="student-photo">
+            </div>
+            <h2>Debasis Parida</h2>
+            <p>Dcs-22-13</p>
+        </div>
+        <div class="student">
+            <div class="student-photo-container">
+                <img src="Dcs-22-14.jpg" alt="Student 2" class="student-photo">
+            </div>
+            <h2>Dibyasa Maharana</h2>
+            <p>DCS-22-14</p>
+        </div>
+        <div class="student">
+            <div class="student-photo-container">
+                <img src="dcs-22-21.jpg" alt="Student 2" class="student-photo">
+            </div>
+            <h2>Kishan Behera </h2>
+            <p>DCS-22-21</p>
+        </div>
+        <div class="student">
+            <div class="student-photo-container">
+                <img src="dcs-212-26.jpg" alt="Student 2" class="student-photo">
+            </div>
+            <h2>Rakesh Ghadei</h2>
+            </h2>
+            <p>DCS-22-26</p>
+        </div>
+
+
+        <div class="student">
+            <div class="student-photo-container">
+                <img src="dcs-22-31.jpg" alt="Student 2" class="student-photo">
+            </div>
+            <h2>Satya sanatana Nayak </h2>
+            <p>DCS-22-31</p>
+        </div>
+        <div class="student">
+            <div class="student-photo-container">
+                <img src="dcs-22-34.jpg" alt="Student 2" class="student-photo">
+            </div>
+            <h2>Satyajit Gochhayat </h2>
+            <p>DCS-22-34</p>
+        </div>
+        <div class="student">
+            <div class="student-photo-container">
+                <img src="dcs-22-37.jpg" alt="Student 2" class="student-photo">
+            </div>
+            <h2>Selton Nayak </h2>
+            <p>DCS-22-37</p>
+        </div>
+        <div class="student">
+            <div class="student-photo-container">
+                <img src="dcs-22-38.jpg" alt="Student 2" class="student-photo">
+            </div>
+            <h2>Satya Sridhar Mishra</h2>
+            <p>Dcs-22-38</p>
+        </div>
+        <div class="student">
+            <div class="student-photo-container">
+                <img src="dcs-22-41.jpg" alt="Student 2" class="student-photo">
+            </div>
+            <h2>Soumya Ranjana Barala</h2>
+            <p>Dcs-22-41</p>
+        </div>
+        <div class="student">
+            <div class="student-photo-container">
+                <img src="dcs-22-42.jpg" alt="Student 2" class="student-photo">
+            </div>
+            <h2>Soumya Ranjan Sahoo</h2>
+            <p>Dcs-22-42</p>
+        </div>
+        <div class="student">
+            <div class="student-photo-container">
+                <img src="dcs-22-44.jpg" alt="Student 2" class="student-photo">
+            </div>
+            <h2>Surya Narayana Nayak/h2>
+            <p>Dcs-22-44</p>
+        </div>
+        <div class="student">
+            <div class="student-photo-container">
+                <img src="dcs-22-45.jpg" alt="Student 2" class="student-photo">
+            </div>
+            <h2>Susil Pradhan</h2>
+            <p>Dcs-22-45</p>
+        </div>
+        <div class="student">
+            <div class="student-photo-container">
+                <img src="Dcs-23-Le-01.jpg" alt="Student 2" class="student-photo">
+            </div>
+            <h2>Amar Nath</h2>
+            <p>DCS-23-LE-01</p>
+        </div>   <div class="student">
+            <div class="student-photo-container">
+                <img src="dcs-23-Le-04.jpg" alt="Student 2" class="student-photo">
+            </div>
+            <h2>Purnachandra Nanda</h2>
+            <p>DCS-23-LE-04</p>
+        </div>
+
+        <div class="student">
+            <div class="student-photo-container">
+                <img src="Dcs-23-le-o5.jpg" alt="Student 2" class="student-photo">
+            </div>
+            <h2>Rakesh Barik</h2>
+            <p>DCS-23-LE-05</p>
+        </div>
+
+        <div class="student">
+            <div class="student-photo-container">
+                <img src="des-23-l2-08.jpg" alt="Student 2" class="student-photo">
+            </div>
+            <h2>Somanath Sahoo</h2>
+            <p>DCS-23-LE-08</p>
+        </div>
+        <div class="student">
+            <div class="student-photo-container">
+                <img src="Dcs-23-le-09.jpg" alt="Student 2" class="student-photo">
+            </div>
+            <h2>Sonalin Sahu</h2>
+            <p>DCS-23-LE-09</p>
+        </div>
+        <div class="student">
+            <div class="student-photo-container">
+                <img src="DCS-23-LE-10.jpg" alt="Student 2" class="student-photo">
+            </div>
+            <h2>Soubhagya Barala</h2>
+            <p>DCS-23-LE-10</p>
+        </div>
+        <div class="student">
+            <div class="student-photo-container">
+                <img src="Dcs-23-LE-11.jpg" alt="Student 2" class="student-photo">
+            </div>
+            <h2>Soumyajit Nanda</h2>
+            <p>DCS-23-LE-11</p>
+        </div>
+        <div class="student">
+            <div class="student-photo-container">
+                <img src="dme-22-33.jpg" alt="Student 2" class="student-photo">
+            </div>
+            <h2>Netrananda Behera</h2>
+            <p>DCS-22-33</p>
+        </div>
+        

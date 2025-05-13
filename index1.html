@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synergy School of Engineering</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Header Styling */
+        header {
+            text-align: center;
+            background: #891c1c;
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .center-image {
+            display: block;
+            margin: 10px auto;
+            border-radius: 10px;
+            background: white;
+            padding: 5px;
+        }
+
+        /* Navigation Bar Styling */
+        nav {
+            position: sticky;
+            height: 5vh;
+            background-color: #891c1c;
+            padding: 10px;
+            /* border-radius: 5px; */
+            margin: 0 5vw;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #f4f4f4;
+            transform: scale(1.1); /* Scale effect on hover */
+        }
+
+        /* Section Styling */
+        section {
+            text-align: center;
+            padding: 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            background: #f8f9fa;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .content-container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            animation: slideIn 0.5s ease; /* Slide-in animation */
+        }
+
+        .message-container {
+            animation: slideIn 0.5s ease; /* Slide-in animation for message containers */
+        }
+
+        .download-link:hover {
+            background: #a52a2a;
+            transform: scale(1.05); /* Scale effect on hover */
+        }
+
+        footer {
+            animation: fadeIn 0.5s ease; /* Fade-in effect for footer */
+        }
+
+
+        .content-container h1 {
+            color: #881367;
+            font-size: 26px;
+            text-align: center;
+        }
+
+        .content-container p {
+            font-size: 16px;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        /* Download Section */
+        .download-container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            animation: fadeIn 0.5s ease; /* Fade-in animation */
+        }
+
+        .download-container h2 {
+            color: #881367;
+            text-align: center;
+        }
+
+        .download-link {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            background: #891c1c;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            transition: background 0.3s ease;
+        }
+
+        .download-link:hover {
+            background: #a52a2a;
+        }
+
+        /* Chairman's Message Section */
+        .message-container {
+            display: flex;
+            align-items: center;
+            background: white;
+            padding: 30px;
+            margin-top: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            animation: fadeIn 0.5s ease; /* Fade-in animation */
+        }
+
+        .message-container img {
+            width: 200px;
+            border-radius: 10px;
+            margin-right: 20px;
+            border: 5px solid #9B1C31;
+        }
+
+        .message-content h2 {
+            color: #9B1C31;
+            font-size: 24px;
+        }
+
+        .message-text {
+            font-size: 16px;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+ /* Carousel Styling */
+        .carousel {
+            background-size: cover ;
+            position: relative;
+            height: 90vh;
+            width: auto;
+            margin: 20px auto;
+            overflow: hidden;
+        }
+
+        .carousel-images {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-images img {
+            width: 100%;
+            height: auto;
+        }
+
+        .prev,
+        .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.8);
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s ease;
+        }
+
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(255,  255,  255, 1); /* Change background on hover */
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #891c1c;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            animation: slideIn 0.5s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .footer-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .footer-content p {
+            margin: 5px 0;
+        }
+
+        .illustration {
+            width: 50px;
+            margin: 0 5px;
+            animation: bounce 1s infinite alternate;
+        }
+
+        @keyframes bounce {
+            from {
+                transform: translateY(0);
+            }
+            to {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="right-nav">
+                <img style="height: 70px;" src="logo.png" alt="SSE Logo" style="height: 50px;">
+            </div>
+           <div class="left-nav">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="faculty.html">Faculty</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="students.html">Students</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+           </div>
+        </nav>
+    </header>
+
+    <div id="carousel" class="carousel">
+        <div class="carousel-images">
+            <div class="carousel-item">
+                <img src="s1.jpg" alt="Image 1">
+            </div>
+            <div class="carousel-item">
+                <img src="s2.jpg" alt="Image 2">
+            </div>
+            <div class="carousel-item">
+                <img src="s3.jpg" alt="Image 3">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentIndex = 0;
+        const items = document.querySelectorAll('.carousel-item');
+        const totalItems = items.length;
+
+        function showSlide(index) {
+            items.forEach((item, i) => {
+                item.style.display = (i === index) ? 'block' : 'none';
+            });
+        }
+
+        function moveSlide(direction) {
+            currentIndex = (currentIndex + direction + totalItems) % totalItems;
+            showSlide(currentIndex);
+        }
+
+        function autoScroll() {
+            currentIndex = (currentIndex + 1) % totalItems;
+            showSlide(currentIndex);
+        }
+
+        setInterval(autoScroll, 3000); // Change slide every 3 seconds
+        showSlide(currentIndex);
+    </script>
+
+    
+
+    <div class="message-container">
+        <img src="chairman.jpg" alt="Chairman">
+        <div class="message-content">
+            <h2>Chairman's Message</h2>
+            <p class="message-text">Dear Students, with flagship programs like 'Skill India' and 'Make in India,' the future of engineering is immense. Engineers are vital for technological advancements and nation-building. However, beyond academics, your goal should be to become well-rounded individuals. Education is incomplete without holistic development. Stay positive, embrace learning, and make a difference in the world.</p>
+        </div>
+    </div>
+
+    <div class="message-container">
+        <img src="Director.jpg" alt="Director">
+        <div class="message-content">
+            <h2>Director's Message</h2>
+            <p class="message-text"><b>Dr. Prashanta Kumar Nayak (Director)</b><br>Today we are all witnessing the consequences of globalization and liberalization. It is true that technological transformation has influenced all our lives. In this era of globalization of education, the obvious focus is on the quality of education. There is no single yardstick of quality. A good educational institution strives continuously for sustenance and enhancement of quality in every field of its activity. As the Director of Synergy Institute of Engineering & Technology, Dhenkanal I am delighted to have the opportunity to share with you the spirit and essence of our college. At Synergy, we believe in nurturing young minds and empowering them to become skilled professionals and future leaders in the field of engineering. Our mission is to provide a holistic education that combines rigorous academic training with practical skills, critical thinking, and ethical values. We strive to create an environment that fosters innovation, creativity, and lifelong learning. Our dedicated faculty members are experts in their respective fields, committed to imparting knowledge and inspiring our students to reach their full potential. We offer a wide range of undergraduate programs, carefully designed to meet the demands of a rapidly evolving technological landscape. With state-of-the-art laboratories, advanced research facilities, and industry collaborations, we ensure that our students receive a comprehensive education that aligns with the latest industry trends. Beyond academics, we encourage students to participate in co-curricular activities, clubs, and events, which foster their personal growth, leadership skills, and a sense of camaraderie. As you embark on this exciting journey with Synergy Institute of Engineering & Technology, I encourage you to make the most of the opportunities presented to you. I invite you to explore our website and discover more about the opportunities and experiences that await you at Synergy. As the Director of this esteemed institution, I am confident that your time at Synergy will be transformative, and I assure you that our dedicated faculty and staff will be there to support you every step of the way. Together, let us strive for excellence, ignite the spark of innovation and create a positive impact on the world.</p>
+        </div>
+    </div>  
+    <footer>
+        <div class="footer-content">
+            <h2>Stay Connected</h2>
+            <p>Follow us on our social media channels:</p>
+            <i class="ri-facebook-circle-fill">Facebook</i>
+            <i class="ri-twitter-fill">Twitter</i>
+            <i class="ri-instagram-fill">Instagram</i>
+
+            <p>&copy; 2023 Synergy School of Engineering. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
